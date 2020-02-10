@@ -10,7 +10,7 @@ public class FileUtilitiesTestCase {
 
         final String EXPECTED = "jpg";
 
-        String actual = FileUtilities.getFileExtension("any_name.jpg");
+        String actual = FileNameUtilities.getFileExtension("any_name.jpg");
 
         Assertions.assertEquals(EXPECTED, actual);
         System.out.println("Actual extension: " +actual);
@@ -22,7 +22,7 @@ public class FileUtilitiesTestCase {
 
         final String EXPECTED = "jpg";
 
-        String actual = FileUtilities.getFileExtension("any_name.png.jpg");
+        String actual = FileNameUtilities.getFileExtension("any_name.png.jpg");
 
         Assertions.assertEquals(EXPECTED, actual);
         System.out.println("Actual extension: " +actual);
@@ -32,7 +32,7 @@ public class FileUtilitiesTestCase {
     @Test
     void getFileExtension_fileNameIsNull_shouldThrowNPE() {
 
-        Assertions.assertThrows(NullPointerException.class, () -> FileUtilities.getFileExtension(null));
+        Assertions.assertThrows(NullPointerException.class, () -> FileNameUtilities.getFileExtension(null));
 
     }
 
@@ -41,7 +41,7 @@ public class FileUtilitiesTestCase {
 
         final String EXPECTED = "any_name";
 
-        String actual = FileUtilities.getFileNameWithoutExtension("any_name.jpg");
+        String actual = FileNameUtilities.getFileNameWithoutExtension("any_name.jpg");
 
         Assertions.assertEquals(EXPECTED, actual);
         System.out.println("Actual extension: " +actual);
@@ -53,7 +53,7 @@ public class FileUtilitiesTestCase {
 
         final String EXPECTED = "any_name.png";
 
-        String actual = FileUtilities.getFileNameWithoutExtension("any_name.png.jpg");
+        String actual = FileNameUtilities.getFileNameWithoutExtension("any_name.png.jpg");
 
         Assertions.assertEquals(EXPECTED, actual);
         System.out.println("Actual extension: " +actual);
@@ -63,7 +63,7 @@ public class FileUtilitiesTestCase {
     @Test
     void getFileNameWithoutExtension_fileNameIsNull_shouldThrowNPE() {
 
-        Assertions.assertThrows(NullPointerException.class, () -> FileUtilities.getFileNameWithoutExtension(null));
+        Assertions.assertThrows(NullPointerException.class, () -> FileNameUtilities.getFileNameWithoutExtension(null));
 
     }
 

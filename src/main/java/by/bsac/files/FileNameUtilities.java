@@ -1,8 +1,15 @@
 package by.bsac.files;
 
+/**
+ * Custom utilities for java io/nio package.
+ */
+public class FileNameUtilities {
 
-public class FileUtilities {
-
+    /**
+     * Method return extension of given file name string.
+     * @param a_file_name - given file name {@link String}.
+     * @return - file extension.
+     */
     public static String getFileExtension(String a_file_name) {
 
         if (a_file_name == null)
@@ -18,6 +25,11 @@ public class FileUtilities {
         return extension;
     }
 
+    /**
+     * Method return file name {@link String} without file extension.
+     * @param a_file_name - given file name {@link String}.
+     * @return - file name {@link String}.
+     */
     public static String getFileNameWithoutExtension(String a_file_name) {
 
         String name = "";
